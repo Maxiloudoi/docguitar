@@ -1,0 +1,23 @@
+### GET ALL ACTIVITY FIELDS
+GET http://localhost:8080/activityfields HTTP/1.1
+
+### GET ONE ACTIVITY FIELDS
+GET http://localhost:8080/activityfields/5f4a0041-ce11-48b6-8730-2e88f931e3d1 HTTP/1.1
+
+### POST ACTIVITY FIELDS
+POST http://localhost:8080/activityfields HTTP/1.1
+Content-Type: application/json
+
+{
+    "instrument": "Amplification"
+}
+
+### PUT ACTIVITY FIELDS
+PUT http://localhost:8080/activityfields/5f4a0041-ce11-48b6-8730-2e88f931e3d1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "instrument": "Violon"
+}
+### DELETE ACTIVITY FIELDS
+DELETE http://localhost:8080/activityfields HTTP/1.1

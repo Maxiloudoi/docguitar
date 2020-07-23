@@ -1,0 +1,25 @@
+### GET ALL USERTYPES
+GET http://localhost:8080/usertypes HTTP/1.1
+
+### GET ONE USERTYPE
+GET  http://localhost:8080/usertypes/0995f392-b8b1-4063-9928-d320815d2ae0 HTTP/1.1
+
+### POST ONE USERTYPE
+POST http://localhost:8080/usertypes HTTP/1.1
+Content-Type: application/json
+
+{
+    "label": "Professionnel"
+}
+
+### PUT ONE USER 
+PUT http://localhost:8080/usertypes/12cde2a7-78dd-4020-9a80-1f9e0d5bba94 HTTP/1.1
+Content-Type: application/json
+
+{
+    "label": "Musicien",
+    
+}
+
+### DELETE ONE USERTYPE
+DELETE http://localhost:8080/usertypes/0995f392-b8b1-4063-9928-d320815d2ae0 HTTP/1.1
