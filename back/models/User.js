@@ -41,6 +41,10 @@ const User = sequelizeInstance.define(
             type: Sequelize.STRING(100),
             allowNull: false,
         },
+        role: {
+            type: Sequelize.STRING(100),
+            allowNull: false,
+        },
         logo: {
             type: Sequelize.STRING(250),
             allowNull: true,
@@ -63,11 +67,7 @@ const User = sequelizeInstance.define(
 );
 
 User.prototype.validPassword = function (password) {
-    if (password === this.passwordp) {
-        return true;
-    } else {
-        return false;
-    }
+    return bcrypt.compareSync(password, this.password);
 };
 
 module.exports = User;

@@ -9,7 +9,7 @@ const users = require("./routes/user.route");
 const userTypes = require("./routes/usertype.route");
 const posts = require("./routes/post.route");
 const activityFields = require("./routes/activityfields.route");
-const router = require("./routes/auth.route");
+const auth = require("./routes/auth.route");
 
 app.use(cors());
 app.use(express.json());
@@ -23,7 +23,7 @@ app.use("/posts", posts);
 app.use("/usertypes", userTypes);
 app.use("/users", users);
 app.use("/activityfields", activityFields);
-app.use("/auth", router);
+app.use("/auth", auth);
 
 app.get("/", (request, response) => {
     response.send("Bienvenue sur Doc'Guitare !");
