@@ -1,25 +1,30 @@
 ### GET ALL USERTYPES
 GET http://localhost:8080/usertypes HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
 
 ### GET ONE USERTYPE
-GET  http://localhost:8080/usertypes/07872565-8ba4-4254-8714-b4cddda61379 HTTP/1.1
+GET  http://localhost:8080/usertypes/3cfe76c0-18f6-40fa-a0f7-ce7935f5c789 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
 
 ### POST ONE USERTYPE
 POST http://localhost:8080/usertypes HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
 Content-Type: application/json
 
 {
-    "label": "Professionnel"
+    "label": "Magasin de Musique"
 }
 
 ### PUT ONE USER 
-PUT http://localhost:8080/usertypes/07872565-8ba4-4254-8714-b4cddda61379 HTTP/1.1
+PUT http://localhost:8080/usertypes/cfe76c0-18f6-40fa-a0f7-ce7935f5c789 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
 Content-Type: application/json
 
 {
-    "label": "Musicien",
+    "label": "Professionnel(le)"
     
 }
 
 ### DELETE ONE USERTYPE
-DELETE http://localhost:8080/usertypes/0995f392-b8b1-4063-9928-d320815d2ae0 HTTP/1.1
+DELETE http://localhost:8080/usertypes/5961010f-33b1-40da-8782-e864391f5c31 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY

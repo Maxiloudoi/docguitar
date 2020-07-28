@@ -2,7 +2,7 @@
 GET http://localhost:8080/posts HTTP/1.1
 
 ### GET ONE POST
-GET http://localhost:8080/posts/ac75abb1-e836-4ddf-9ee7-1493712e7413 HTTP/1.1
+GET http://localhost:8080/posts/a35ae889-b370-4a6c-a0b7-4040414d2a29 HTTP/1.1
 
 ### POST ONE POST
 POST http://localhost:8080/posts
@@ -14,12 +14,12 @@ Content-Type: application/json
 }
 
 ### PUT POST
-PUT http://localhost:8080/posts/ef8088c8-563e-4722-a8f4-71568f76cba5 HTTP/1.1
+PUT http://localhost:8080/posts/a35ae889-b370-4a6c-a0b7-4040414d2a29 HTTP/1.1
 Content-Type: application/json
 
 {    
-    "title": "Réglage guitare",
-    "content": "Ou ?"
+    "title": "Changement de micro",
+    "content": "quelle association pour une LesPaul ?"
 }
 
 ### DELETE ONE POST

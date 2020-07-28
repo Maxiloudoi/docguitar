@@ -1,9 +1,10 @@
 const express = require("express");
 const userTypes = express.Router();
 const UserType = require("../models/UserType");
+const authRole = require("../middlewares/authRole");
 
 
-userTypes.get("/", async (req, res) => {
+userTypes.get("/", authRole(["ADMIN", "USER"]), async (req, res) => {
   try {
     const userType = await UserType.findAll();
     res.status(200).json(userType);
@@ -12,7 +13,7 @@ userTypes.get("/", async (req, res) => {
   }
 });
 
-userTypes.get("/:id", async (req, res) => {
+userTypes.get("/:id", authRole(["ADMIN", "USER"]),async (req, res) => {
   const { id } = req.params;
   try {
     const userType = await UserType.findOne({ where: { id } });
@@ -22,7 +23,7 @@ userTypes.get("/:id", async (req, res) => {
   }
 });
 
-userTypes.post("/", async (req, res) => {
+userTypes.post("/", authRole("ADMIN"),async (req, res) => {
   const { label } = req.body;
   try {
     const type = await UserType.create({ label });
@@ -32,24 +33,18 @@ userTypes.post("/", async (req, res) => {
   }
 });
 
-userTypes.put("/:id", async (req, res) => {
+userTypes.put("/:id", authRole("ADMIN"),async (req, res) => {
   const { id } = req.params;
   const { label } = req.body;
-  console.log(label);
   try {
-    const type = await UserType.update(
-      {
-        label,
-      },
-      { where: { id } }
-    );
-    res.status(202).send("type d'utilisateur modifié");
+      const type = await UserType.update({ label }, { where: { id } });
+      res.status(202).send("type d'utilisateur modifié");
   } catch (err) {
-    res.status(422).json(err);
+      res.status(422).json(err);
   }
 });
 
-userTypes.delete("/:id", async (req, res) => {
+userTypes.delete("/:id", authRole("ADMIN"),async (req, res) => {
   const { id } = req.params;
   try {
     const userType = await UserType.destroy({ where: { id } });

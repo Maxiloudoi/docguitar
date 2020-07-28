@@ -1,6 +1,7 @@
 const express = require("express");
 const activityFields = express.Router();
 const Field = require("../models/ActivityFiedls");
+const authRole = require("../middlewares/authRole")
 
 activityFields.get("/", async (req, res) => {
     try {

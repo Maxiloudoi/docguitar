@@ -9,7 +9,7 @@ POST http://localhost:8080/activityfields HTTP/1.1
 Content-Type: application/json
 
 {
-    "instrument": "Amplification"
+    "instrument": "Collectionneur"
 }
 
 ### PUT ACTIVITY FIELDS
