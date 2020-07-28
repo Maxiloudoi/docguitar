@@ -1,23 +1,28 @@
 ### GET ALL ACTIVITY FIELDS
 GET http://localhost:8080/activityfields HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
 
 ### GET ONE ACTIVITY FIELDS
-GET http://localhost:8080/activityfields/5f4a0041-ce11-48b6-8730-2e88f931e3d1 HTTP/1.1
+GET http://localhost:8080/activityfields/0039313c-c9ce-496b-a687-c5f6079f3e45 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
 
 ### POST ACTIVITY FIELDS
 POST http://localhost:8080/activityfields HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
 Content-Type: application/json
 
 {
-    "instrument": "Collectionneur"
+    "domaine": "Ingénieur du son"
 }
 
 ### PUT ACTIVITY FIELDS
 PUT http://localhost:8080/activityfields/5f4a0041-ce11-48b6-8730-2e88f931e3d1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
 Content-Type: application/json
 
 {
-    "instrument": "Violon"
+    "domaine": "Violon"
 }
 ### DELETE ACTIVITY FIELDS
 DELETE http://localhost:8080/activityfields HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g

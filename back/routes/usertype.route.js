@@ -23,7 +23,7 @@ userTypes.get("/:id", authRole(["ADMIN", "USER"]),async (req, res) => {
   }
 });
 
-userTypes.post("/", authRole("ADMIN"),async (req, res) => {
+userTypes.post("/", async (req, res) => {
   const { label } = req.body;
   try {
     const type = await UserType.create({ label });

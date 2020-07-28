@@ -9,7 +9,7 @@ const ActiviyField = sequelizeInstance.define("ActivityField", {
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
     },
-    instrument: {
+    domaine: {
         type: Sequelize.STRING(100),
         allowNull: false,
     },

@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const sequelize = require("./sequilize");
+require("./associationTable")
 const port = 8080;
 const cors = require("cors");
 
@@ -30,7 +31,7 @@ app.get("/", (request, response) => {
 });
 
 sequelize
-    .sync()
+    .sync({alter: true})
     .then(() => {
         return sequelize.authenticate();
     })
