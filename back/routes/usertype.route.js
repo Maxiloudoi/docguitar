@@ -35,9 +35,9 @@ userTypes.post("/", async (req, res) => {
 userTypes.put("/:id", async (req, res) => {
   const { id } = req.params;
   const { label } = req.body;
-  console.log(label)
+  console.log(label);
   try {
-    const type = await User.update(
+    const type = await UserType.update(
       {
         label,
       },
