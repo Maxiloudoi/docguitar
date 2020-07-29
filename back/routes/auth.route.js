@@ -38,7 +38,6 @@ router.post("/login", async (req, res) => {
     } else {
       res.status(422).json({
         message: "Wrong credentials",
-        hint: "password",
       });
     }
   } catch (error) {

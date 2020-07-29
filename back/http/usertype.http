@@ -1,23 +1,23 @@
 ### GET ALL USERTYPES
 GET http://localhost:8080/usertypes HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 
 ### GET ONE USERTYPE
 GET  http://localhost:8080/usertypes/3cfe76c0-18f6-40fa-a0f7-ce7935f5c789 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
+Authorization: Bearer eeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 
 ### POST ONE USERTYPE
 POST http://localhost:8080/usertypes HTTP/1.1
-//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 Content-Type: application/json
 
 {
-    "label": "Passionné"
+    "label": "Professionnel"
 }
 
 ### PUT ONE USER 
 PUT http://localhost:8080/usertypes/cfe76c0-18f6-40fa-a0f7-ce7935f5c789 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 Content-Type: application/json
 
 {
@@ -27,4 +27,4 @@ Content-Type: application/json
 
 ### DELETE ONE USERTYPE
 DELETE http://localhost:8080/usertypes/5961010f-33b1-40da-8782-e864391f5c31 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkzNzk0NCwiZXhwIjoxNTk1OTQxNTQ0fQ.fX1N7AIF2HOR37hnjbiygMOS4zNmvm-6pIY8yEy7ENY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w

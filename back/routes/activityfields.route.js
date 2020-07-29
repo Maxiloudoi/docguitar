@@ -22,7 +22,7 @@ activityFields.get("/:id",authRole(["ADMIN", "USER"]), async (req, res) => {
     }
 });
 
-activityFields.post("/",authRole("ADMIN"), async (req, res) => {
+activityFields.post("/", async (req, res) => {
     const { domaine } = req.body;
     try {
         const field = await Field.create({ domaine });

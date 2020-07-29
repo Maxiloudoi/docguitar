@@ -1,0 +1,30 @@
+### GET ALL COMMENTS
+GET http://localhost:8080/comments HTTP/1.1
+
+###GET ONE COMMENTS
+GET http://localhost:8080/comments HTTP/1.1
+
+### POST COMMENT
+POST http://localhost:8080/comments HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "comment" : "Moi je sais faire s'tu veux !",
+    "UserId": "4c20116b-b5e7-407f-b615-92699f511536",
+    "PostId": "5c46ac34-3e2c-49b8-bf2c-67310e0e696e"
+}
+
+### PUT COMMENT
+PUT http://localhost:8080/comments HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "comment" : "Youhou",
+    "UserId": "",
+    "PostID": ""
+}
+
+### DELETE COMMENT
+DELETE http://localhost:8080/comments HTTP/1.1

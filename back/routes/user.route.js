@@ -18,6 +18,7 @@ users.get("/", authRole("ADMIN"), async (req, res) => {
         },
       ],
     });
+    console.log(user);
 
     res.status(200).json(user);
   } catch (err) {
@@ -28,7 +29,19 @@ users.get("/", authRole("ADMIN"), async (req, res) => {
 users.get("/:id", authRole(["ADMIN", "USER"]), async (req, res) => {
   const { id } = req.params;
   try {
-    const user = await User.findOne({ where: { id } });
+    const user = await User.findOne(
+      {
+        include: [
+          {
+            model: UserType,
+          },
+          {
+            model: ActiviyField,
+          },
+        ],
+      },
+      { where: { id } }
+    );
 
     res.status(200).json(user);
   } catch (err) {
@@ -40,8 +53,9 @@ users.post("/", async (req, res) => {
   const {
     lastName,
     firstName,
-    phone,
+    username,
     email,
+    phone,
     password,
     localisation,
     role,
@@ -53,8 +67,9 @@ users.post("/", async (req, res) => {
     const user = await User.create({
       lastName,
       firstName,
-      phone,
+      username,
       email,
+      phone,
       password,
       localisation,
       role,
@@ -74,6 +89,7 @@ users.put("/:id", authRole(["ADMIN", "USER"]), async (req, res) => {
   const {
     lastName,
     firstName,
+    username,
     phone,
     email,
     password,
@@ -88,6 +104,7 @@ users.put("/:id", authRole(["ADMIN", "USER"]), async (req, res) => {
       {
         lastName,
         firstName,
+        username,
         phone,
         email,
         password,
@@ -108,6 +125,7 @@ users.put("/:id", authRole(["ADMIN", "USER"]), async (req, res) => {
 
 users.delete("/:id", authRole(["ADMIN", "USER"]), async (req, res) => {
   const { id } = req.params;
+
   try {
     const user = await User.destroy({ where: { id } });
     res.status(205).send("L'utilisateur à bien été supprimé");

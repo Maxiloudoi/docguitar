@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const express = require("express");
 const bcrypt = require("bcrypt");
-
+const saltRounds = 10;
 const sequelizeInstance = require("../sequilize");
 
 const User = sequelizeInstance.define(
@@ -18,6 +18,10 @@ const User = sequelizeInstance.define(
             allowNull: false,
         },
         firstName: {
+            type: Sequelize.STRING(100),
+            allowNull: false,
+        },
+        username: {
             type: Sequelize.STRING(100),
             allowNull: false,
         },
@@ -53,10 +57,10 @@ const User = sequelizeInstance.define(
     {
         hooks: {
             beforeCreate: (user) => {
-                const salt = bcrypt.genSaltSync();
-                user.password = bcrypt.hashSync(user.passord, salt);
+                const salt = bcrypt.genSaltSync(saltRounds);
+                user.password = bcrypt.hashSync(user.password, salt);
             },
-            beforeCreate: (user) => {
+            beforeUpdate: (user) => {
                 if (user.changed("password")) {
                     const salt = bcrypt.genSaltSync();
                     user.password = bcrypt.hashSync(user.get("password"), salt);

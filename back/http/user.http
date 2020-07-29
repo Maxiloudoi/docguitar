@@ -1,50 +1,52 @@
 ### GET ALL USER
 GET http://localhost:8080/users HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 
 ### GET ONE USER
 GET  http://localhost:8080/users/14284313-cff8-4242-a794-64f0689f0cae HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTU2NTc4LCJleHAiOjE1OTU5NjAxNzh9.SDanRnjSSdluEwgF8MXOkM53LPxDBP7JGElLm2GnO00
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 
 ### POST ONE USER
 POST http://localhost:8080/users HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTU2NTc4LCJleHAiOjE1OTU5NjAxNzh9.SDanRnjSSdluEwgF8MXOkM53LPxDBP7JGElLm2GnO00
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 Content-Type: application/json
 
 {
-    "lastName": "Borroka",
-    "firstName": "Kale",
-    "email": "maxiloud@test.com",
+    "lastName": "Dad",
+    "firstName": "Dadou",
+    "username" : "Dadou",
+    "email": "maxiloud2@test.com",
     "phone": "0656899858",
     "password": "totoTOTO",
     "localisation": "Baiona",
     "role" : "ADMIN",
     "logo": "ok",
-    "UserTypeId": "de2cd927-3804-41cd-8d74-e401ac5d6111",
-    "ActivityFieldId": "d76f8b54-c957-41d4-98ee-cf037c0b0dbc"
+    "UserTypeId": "a3238bb5-2f9a-4541-907b-78dbe75a93c1",
+    "ActivityFieldId": "89400895-ad8a-4452-8539-586d8e1cbb65"
 }
 
 ### PUT ONE USER 
 PUT http://localhost:8080/users/94445d9c-8ee7-440f-9e75-c88af82545d4 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk1OTYyNzUzLCJleHAiOjE1OTYwNDkxNTN9.UitsjMwkASQnKpojIJQbFydoqd82Nt8fbKogrFmj_2g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 Content-Type: application/json
 
 {
-    "lastName": "Borroka",
-    "firstName": "Kale",
-    "email": "maxiloud@test.com",
+    "lastName": "Dad",
+    "firstName": "Dadou",
+    "username" : "Dadou",
+    "email": "maxiloud8@test.com",
     "phone": "0708090605",
     "password": "totoTOTO",
     "localisation": "Baiona",
     "role": "ADMIN",
     "logo": "ok",
     "UserTypeId": "de2cd927-3804-41cd-8d74-e401ac5d6111",
-    "ActivityFieldId": "3bd037bd-ec8c-4108-8903-7e47923e1148"
+    "ActivityFieldId": "d76f8b54-c957-41d4-98ee-cf037c0b0dbc"
 }
 
 ### DELETE ONE USER
 DELETE http://localhost:8080/users/9ae179b2-7047-4415-861d-7cab4ade32d4 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkMkB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTU5NTkyNDAzMSwiZXhwIjoxNTk2MDEwNDMxfQ.s9j0nYLUIjUNJK49qaniyRPTBD1yt0ToisZc-m_cCyI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGlsb3VkQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNTk2MDQ1ODk4LCJleHAiOjE1OTYxMzIyOTh9.Rd9b-s45hDBXE_RPsepnfnEYivOHIt2FrUlP0poIX8w
 
 
 
